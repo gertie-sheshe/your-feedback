@@ -152,20 +152,5 @@
       "required": false,
       "label": "Is there anything else you'd like to share with this person?"
     }
-  ], "feedback" : [
-    {
-      "id": "f1",
-      "questionId": "q1",
-      "answer": "3",
-      "authorId": "p1",
-      "userId": "p0"
-    },
-    {
-      "id": "f2",
-      "questionId": "q2",
-      "answer": "4",
-      "authorId": "p1",
-      "userId": "p0"
-    }
   ]
 }
