@@ -1,7 +1,6 @@
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Dashboard from "./views/Dashboard";
-import Auth from "./views/Auth";
+import Dashboard from "../../views/Dashboard";
+import Auth from "../../views/Auth";
 
 function App() {
   return (
