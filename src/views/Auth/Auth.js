@@ -3,8 +3,12 @@ import { Typography, Grid } from "@mui/material";
 import LoginCard from "../../components/LoginCard/LoginCard";
 import { useNavigate } from "react-router-dom";
 
-const Auth = () => {
+const Auth = ({ selectedUser, setSelectedUser }) => {
   const navigate = useNavigate();
+
+  if (selectedUser) {
+    navigate("/dashboard");
+  }
 
   const handleAuth = () => {
     navigate("/dashboard");
@@ -27,7 +31,7 @@ const Auth = () => {
       >
         Login Form
       </Typography>
-      <LoginCard handleAuth={handleAuth} />
+      <LoginCard selectedUser={selectedUser} handleAuth={handleAuth} />
     </Grid>
   );
 };

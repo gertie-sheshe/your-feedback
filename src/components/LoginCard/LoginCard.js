@@ -2,7 +2,7 @@ import React from "react";
 import { Card, CardContent, CardActions, Button } from "@mui/material";
 import LoginForm from "../../components/LoginForm";
 
-function LoginCard({ handleAuth }) {
+function LoginCard({ handleAuth, selectedUser, setSelectedUser }) {
   return (
     <Card
       sx={{
@@ -11,10 +11,15 @@ function LoginCard({ handleAuth }) {
       }}
     >
       <CardContent>
-        <LoginForm />
+        <LoginForm setSelectedUser={setSelectedUser} />
       </CardContent>
       <CardActions>
-        <Button sx={{ width: "100%" }} variant="contained" onClick={handleAuth}>
+        <Button
+          disabled={selectedUser === null}
+          sx={{ width: "100%" }}
+          variant="contained"
+          onClick={handleAuth}
+        >
           Login
         </Button>
       </CardActions>

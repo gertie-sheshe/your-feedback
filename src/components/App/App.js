@@ -6,11 +6,20 @@ import Auth from "../../views/Auth";
 
 function App() {
   const [value, setValue] = useState(0);
+  const [selectedUser, setSelectedUser] = useState(null);
   return (
     <div className="App">
       <Header setValue={setValue} tabValue={value} />
       <Routes>
-        <Route path="/" element={<Auth />} />
+        <Route
+          path="/"
+          element={
+            <Auth
+              selectedUser={selectedUser}
+              setSelectedUser={setSelectedUser}
+            />
+          }
+        />
         <Route path="/dashboard" element={<Dashboard tabValue={value} />} />
       </Routes>
     </div>
