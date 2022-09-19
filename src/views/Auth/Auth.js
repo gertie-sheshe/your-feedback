@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typography, Grid } from "@mui/material";
 import LoginCard from "../../components/LoginCard/LoginCard";
 import { useNavigate } from "react-router-dom";
@@ -6,12 +6,16 @@ import { useNavigate } from "react-router-dom";
 const Auth = ({ selectedUser, setSelectedUser }) => {
   const navigate = useNavigate();
 
-  if (selectedUser) {
-    navigate("/dashboard");
-  }
+  useEffect(() => {
+    if (selectedUser) {
+      navigate("/dashboard");
+    }
+  }, [selectedUser]);
 
   const handleAuth = () => {
-    navigate("/dashboard");
+    if (selectedUser) {
+      navigate("/dashboard");
+    }
   };
   return (
     <Grid
@@ -31,7 +35,11 @@ const Auth = ({ selectedUser, setSelectedUser }) => {
       >
         Login Form
       </Typography>
-      <LoginCard selectedUser={selectedUser} handleAuth={handleAuth} />
+      <LoginCard
+        selectedUser={selectedUser}
+        setSelectedUser={setSelectedUser}
+        handleAuth={handleAuth}
+      />
     </Grid>
   );
 };
