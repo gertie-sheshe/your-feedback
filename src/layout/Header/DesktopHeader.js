@@ -1,9 +1,12 @@
 import React from "react";
 import { HeaderContainer } from "./HeaderStyles";
 import UserAvatar from "../../components/ui/UserAvatar";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Tab, Tabs } from "@mui/material";
 
-function DesktopHeader({ sx, avatar }) {
+function DesktopHeader({ sx, avatar, setTabValue, tabValue }) {
+  const handleChange = (event, newValue) => {
+    setTabValue(newValue);
+  };
   return (
     <Grid sx={sx}>
       <HeaderContainer>
@@ -15,6 +18,11 @@ function DesktopHeader({ sx, avatar }) {
         >
           Feedback
         </Typography>
+        <Tabs onChange={handleChange} value={tabValue}>
+          <Tab label="Share Feedback" id="share-feedback" />
+          <Tab label="My Feedback" id="my-feedback" />
+          <Tab label="Team Feedback" id="team-feedback" />
+        </Tabs>
         <UserAvatar src={avatar} alt="Gertie" />
       </HeaderContainer>
     </Grid>
