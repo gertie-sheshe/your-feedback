@@ -25,6 +25,15 @@ const palette = {
 const theme = createTheme({
   breakpoints,
   palette,
+  contentWidths: {
+    values: {
+      sm: 728,
+      md: 1024,
+      lg: 1144,
+      xl: 1144,
+    },
+    unit: "px",
+  },
   typography: {
     fontFamily: FONT_FAMILY,
     h1: {
