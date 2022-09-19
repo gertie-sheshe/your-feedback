@@ -1,4 +1,6 @@
 import React from "react";
+import Button from "@mui/material/Button";
+
 import { Link } from "react-router-dom";
 
 const Dashboard = () => {
@@ -8,7 +10,7 @@ const Dashboard = () => {
       <nav>
         <Link to="/">Auth</Link>
       </nav>
-      ;
+      <Button variant="contained">Hello World</Button>
     </>
   );
 };
