@@ -14,7 +14,6 @@ function MobileHeader({ sx, avatar }) {
           }}
           variant="h1"
         >
-          {" "}
           Feedback
         </Typography>
         <UserAvatar src={avatar} alt="Gertie" />
