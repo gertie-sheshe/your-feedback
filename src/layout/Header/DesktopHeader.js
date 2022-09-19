@@ -1,8 +1,9 @@
 import React from "react";
 import { HeaderContainer } from "./HeaderStyles";
+import UserAvatar from "../../components/ui/UserAvatar";
 import { Grid, Typography } from "@mui/material";
 
-function DesktopHeader({ sx }) {
+function DesktopHeader({ sx, avatar }) {
   return (
     <Grid sx={sx}>
       <HeaderContainer>
@@ -14,6 +15,7 @@ function DesktopHeader({ sx }) {
         >
           Feedback
         </Typography>
+        <UserAvatar src={avatar} alt="Gertie" />
       </HeaderContainer>
     </Grid>
   );
