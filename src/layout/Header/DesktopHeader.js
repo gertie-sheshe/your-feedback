@@ -1,10 +1,20 @@
 import React from "react";
-import { Grid } from "@mui/material";
+import { HeaderContainer } from "./HeaderStyles";
+import { Grid, Typography } from "@mui/material";
 
 function DesktopHeader({ sx }) {
   return (
     <Grid sx={sx}>
-      <header>DesktopHeader</header>
+      <HeaderContainer>
+        <Typography
+          sx={{
+            fontWeight: "bold",
+          }}
+          variant="h1"
+        >
+          Feedback
+        </Typography>
+      </HeaderContainer>
     </Grid>
   );
 }
