@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Grid } from "@mui/material";
+import ShareFeedback from "../../layout/Tabs/ShareFeedback";
 
 import { Link } from "react-router-dom";
 
@@ -14,10 +15,17 @@ const Dashboard = ({ tabValue }) => {
         flexDirection: "column",
       }}
     >
-      <div>Dashboard</div>
-      <div id="share-feedback" role="tabpanel" hidden={tabValue !== 0}>
-        SHARE FEEDBACK CONTENT
-      </div>
+      <Grid
+        sx={{
+          width: { xs: "90vw", sm: "80vw", md: "60vw", lg: "60vw" },
+          height: "100vh",
+        }}
+        id="share-feedback"
+        role="tabpanel"
+        hidden={tabValue !== 0}
+      >
+        <ShareFeedback />
+      </Grid>
       <div id="my-feedback" role="tabpanel" hidden={tabValue !== 1}>
         MY FEEDBACK CONTENT
       </div>

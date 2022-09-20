@@ -1,6 +1,6 @@
 import React from "react";
 import { HeaderContainer } from "./HeaderStyles";
-import UserAvatar from "../../components/ui/UserAvatar";
+import UserAvatar from "../../ui/UserAvatar";
 
 import { Grid, Typography } from "@mui/material";
 
