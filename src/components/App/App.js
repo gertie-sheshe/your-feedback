@@ -9,7 +9,11 @@ function App() {
   const [selectedUser, setSelectedUser] = useState(null);
   return (
     <div className="App">
-      <Header setValue={setValue} tabValue={value} />
+      <Header
+        selectedUser={selectedUser}
+        setValue={setValue}
+        tabValue={value}
+      />
       <Routes>
         <Route
           path="/"

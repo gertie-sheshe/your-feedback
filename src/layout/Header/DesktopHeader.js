@@ -3,7 +3,7 @@ import { HeaderContainer } from "./HeaderStyles";
 import UserAvatar from "../../components/ui/UserAvatar";
 import { Grid, Typography, Tab, Tabs } from "@mui/material";
 
-function DesktopHeader({ sx, avatar, setTabValue, tabValue }) {
+function DesktopHeader({ sx, avatar, setTabValue, tabValue, selectedUser }) {
   const handleChange = (event, newValue) => {
     setTabValue(newValue);
   };
@@ -18,11 +18,13 @@ function DesktopHeader({ sx, avatar, setTabValue, tabValue }) {
         >
           Feedback
         </Typography>
-        <Tabs onChange={handleChange} value={tabValue}>
-          <Tab label="Share Feedback" id="share-feedback" />
-          <Tab label="My Feedback" id="my-feedback" />
-          <Tab label="Team Feedback" id="team-feedback" />
-        </Tabs>
+        {selectedUser && (
+          <Tabs onChange={handleChange} value={tabValue}>
+            <Tab label="Share Feedback" id="share-feedback" />
+            <Tab label="My Feedback" id="my-feedback" />
+            <Tab label="Team Feedback" id="team-feedback" />
+          </Tabs>
+        )}
         <UserAvatar src={avatar} alt="Gertie" />
       </HeaderContainer>
     </Grid>

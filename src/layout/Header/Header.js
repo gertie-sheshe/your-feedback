@@ -4,7 +4,7 @@ import DesktopHeader from "./DesktopHeader";
 import MobileHeader from "./MobileHeader";
 import GertieAvatar from "../../assets/images/avatar.png";
 
-function Header({ setValue, tabValue }) {
+function Header({ setValue, tabValue, selectedUser }) {
   return (
     <Section>
       <DesktopHeader
@@ -14,6 +14,7 @@ function Header({ setValue, tabValue }) {
         avatar={GertieAvatar}
         setTabValue={setValue}
         tabValue={tabValue}
+        selectedUser={selectedUser}
       />
       <MobileHeader
         sx={{

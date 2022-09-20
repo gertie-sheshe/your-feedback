@@ -27,19 +27,23 @@ const Auth = ({ selectedUser, setSelectedUser }) => {
         flexDirection: "column",
       }}
     >
-      <Typography
-        sx={{
-          fontWeight: "bold",
-        }}
-        variant="h2"
-      >
-        Login Form
-      </Typography>
-      <LoginCard
-        selectedUser={selectedUser}
-        setSelectedUser={setSelectedUser}
-        handleAuth={handleAuth}
-      />
+      {!selectedUser && (
+        <>
+          <Typography
+            sx={{
+              fontWeight: "bold",
+            }}
+            variant="h2"
+          >
+            Login Form
+          </Typography>
+          <LoginCard
+            selectedUser={selectedUser}
+            setSelectedUser={setSelectedUser}
+            handleAuth={handleAuth}
+          />
+        </>
+      )}
     </Grid>
   );
 };
