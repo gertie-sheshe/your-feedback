@@ -17,7 +17,7 @@ const Dashboard = ({ tabValue }) => {
     >
       <Grid
         sx={{
-          width: "60vw",
+          width: { xs: "90vw", sm: "80vw", md: "60vw", lg: "60vw" },
           height: "100vh",
         }}
         id="share-feedback"
