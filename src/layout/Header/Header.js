@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "../Section/Section";
+import Section from "../Section";
 import DesktopHeader from "./DesktopHeader";
 import MobileHeader from "./MobileHeader";
 import GertieAvatar from "../../assets/images/avatar.png";
