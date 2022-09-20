@@ -26,7 +26,10 @@ function App() {
           }
         />
         <Route path="/dashboard" element={<Dashboard tabValue={value} />} />
-        <Route path="/user/:id/question/:id" element={<Questions />} />
+        <Route
+          path="/user/:userid/question/:questionid"
+          element={<Questions />}
+        />
       </Routes>
     </div>
   );

@@ -20,7 +20,7 @@ function UsersList() {
   return (
     <List sx={{ width: "inherit" }}>
       {users.map((user) => (
-        <User user={user} />
+        <User key={user.id} user={user} />
       ))}
     </List>
   );
