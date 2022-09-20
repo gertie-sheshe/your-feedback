@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typography, Grid } from "@mui/material";
 import LoginCard from "../../components/LoginCard/LoginCard";
 import { useNavigate } from "react-router-dom";
 
-const Auth = () => {
+const Auth = ({ selectedUser, setSelectedUser }) => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    if (selectedUser) {
+      navigate("/dashboard");
+    }
+  }, [selectedUser]);
+
   const handleAuth = () => {
-    navigate("/dashboard");
+    if (selectedUser) {
+      navigate("/dashboard");
+    }
   };
   return (
     <Grid
@@ -19,15 +27,23 @@ const Auth = () => {
         flexDirection: "column",
       }}
     >
-      <Typography
-        sx={{
-          fontWeight: "bold",
-        }}
-        variant="h2"
-      >
-        Login Form
-      </Typography>
-      <LoginCard handleAuth={handleAuth} />
+      {!selectedUser && (
+        <>
+          <Typography
+            sx={{
+              fontWeight: "bold",
+            }}
+            variant="h2"
+          >
+            Login Form
+          </Typography>
+          <LoginCard
+            selectedUser={selectedUser}
+            setSelectedUser={setSelectedUser}
+            handleAuth={handleAuth}
+          />
+        </>
+      )}
     </Grid>
   );
 };
