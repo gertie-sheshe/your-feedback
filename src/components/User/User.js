@@ -1,5 +1,6 @@
 import React from "react";
-import { ListItem, ListItemAvatar, ListItemText, Button } from "@mui/material";
+import { ListItem, ListItemAvatar, ListItemText } from "@mui/material";
+import { Link } from "./UserStyles";
 import UserAvatar from "../../ui/UserAvatar";
 
 function User({ user }) {
@@ -11,7 +12,9 @@ function User({ user }) {
         },
       }}
       key={user.name}
-      secondaryAction={<Button variant="contained">View Submissions</Button>}
+      secondaryAction={
+        <Link to={`/user/${user.id}/question/q1`}>View Submission</Link>
+      }
     >
       <ListItemAvatar sx={{ display: "flex", padding: "10px" }}>
         <UserAvatar src={user.avatar} alt={user.name} />

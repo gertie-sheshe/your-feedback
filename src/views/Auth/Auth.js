@@ -32,10 +32,11 @@ const Auth = ({ selectedUser, setSelectedUser }) => {
           <Typography
             sx={{
               fontWeight: "bold",
+              paddingBottom: "10px",
             }}
             variant="h2"
           >
-            Login Form
+            Login
           </Typography>
           <LoginCard
             selectedUser={selectedUser}
