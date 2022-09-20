@@ -5,6 +5,11 @@ import UserAvatar from "../../ui/UserAvatar";
 function User({ user }) {
   return (
     <ListItem
+      sx={{
+        "&:hover": {
+          backgroundColor: "#f5f5f5",
+        },
+      }}
       key={user.name}
       secondaryAction={<Button variant="contained">View Submissions</Button>}
     >

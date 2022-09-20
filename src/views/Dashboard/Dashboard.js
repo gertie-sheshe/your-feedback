@@ -15,7 +15,6 @@ const Dashboard = ({ tabValue }) => {
         flexDirection: "column",
       }}
     >
-      <div>Dashboard</div>
       <Grid
         sx={{
           width: "60vw",
