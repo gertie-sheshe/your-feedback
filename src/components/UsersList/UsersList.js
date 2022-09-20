@@ -9,11 +9,11 @@ import gertrudefour from "../../assets/images/gertrude-4.png";
 import gertrudefive from "../../assets/images/gertrude-5.png";
 
 const users = [
-  { name: "Gertrude Kwanza", avatar: gertrudeone },
-  { name: "Gertrude Wapili", avatar: gertrudetwo },
-  { name: "Gertrude Watatu", avatar: gertrudethree },
-  { name: "Gertrude Wanne", avatar: gertrudefour },
-  { name: "Gertrude Watano", avatar: gertrudefive },
+  { id: 1, name: "Gertrude Kwanza", avatar: gertrudeone },
+  { id: 2, name: "Gertrude Wapili", avatar: gertrudetwo },
+  { id: 3, name: "Gertrude Watatu", avatar: gertrudethree },
+  { id: 4, name: "Gertrude Wanne", avatar: gertrudefour },
+  { id: 5, name: "Gertrude Watano", avatar: gertrudefive },
 ];
 
 function UsersList() {

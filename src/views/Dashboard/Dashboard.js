@@ -8,7 +8,7 @@ const Dashboard = ({ tabValue }) => {
   return (
     <Grid
       sx={{
-        height: "80vh",
+        // height: "80vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -18,7 +18,7 @@ const Dashboard = ({ tabValue }) => {
       <Grid
         sx={{
           width: { xs: "90vw", sm: "80vw", md: "60vw", lg: "60vw" },
-          height: "100vh",
+          // height: "100vh",
         }}
         id="share-feedback"
         role="tabpanel"
