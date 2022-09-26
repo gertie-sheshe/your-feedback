@@ -5,6 +5,7 @@ import Scale from "../../components/Scale";
 import questions from "./questionsData";
 import QuestionDetails from "../../components/QuestionDetails";
 import Section from "../../layout/Section";
+import ProgressBar from "../../components/ProgressBar";
 import { useParams } from "react-router-dom";
 import { Grid } from "@mui/material";
 
@@ -31,11 +32,22 @@ function Questions() {
         }}
       >
         {question?.label && <QuestionDetails title={question.label} />}
-        {question?.type === "text" && <Text question={question} />}
-        {question?.type === "multipleChoice" && (
-          <MultiChoice question={question} />
-        )}
-        {question?.type === "scale" && <Scale question={question} />}
+        <Grid
+          sx={{
+            border: "1px solid #E5E5E5",
+            borderRadius: "10px",
+            padding: "20px",
+            width: "60%",
+            height: "80vh",
+          }}
+        >
+          {question?.type === "text" && <Text question={question} />}
+          {question?.type === "multipleChoice" && (
+            <MultiChoice question={question} />
+          )}
+          {question?.type === "scale" && <Scale question={question} />}
+          <ProgressBar />
+        </Grid>
       </Grid>
     </Section>
   );
