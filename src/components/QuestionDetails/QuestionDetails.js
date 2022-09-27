@@ -23,7 +23,11 @@ function QuestionTitle({ title }) {
         </Typography>
       </Grid>
       <Grid item xs={2} sx={{ display: "flex", justifyContent: "end" }}>
-        <UserAvatar src={GertieOne} alt="Gertie" />
+        <UserAvatar
+          src={GertieOne}
+          alt="Gertie"
+          sx={{ width: 60, height: 60 }}
+        />
       </Grid>
     </Grid>
   );
