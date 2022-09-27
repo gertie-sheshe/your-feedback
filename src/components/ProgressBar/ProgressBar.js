@@ -1,5 +1,5 @@
 import React from "react";
-import { LinearProgress } from "@mui/material";
+import { LinearProgress, Typography } from "@mui/material";
 
 function ProgressBar() {
   return (
@@ -18,6 +18,10 @@ function ProgressBar() {
           },
         }}
       />
+      <Typography sx={{ textTransform: "uppercase", fontWeight: "500" }}>
+        Questions Completed
+      </Typography>
+      <Typography sx={{ margin: "5px 0" }}>3/10</Typography>
     </div>
   );
 }
