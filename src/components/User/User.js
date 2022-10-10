@@ -13,7 +13,7 @@ function User({ user }) {
       }}
       key={user.name}
       secondaryAction={
-        <Link to={`/user/${user.id}/question/q1`}>View Submission</Link>
+        <Link to={`/user/${user.id}/question/q2`}>View Submission</Link>
       }
     >
       <ListItemAvatar sx={{ display: "flex", padding: "10px" }}>

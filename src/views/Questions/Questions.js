@@ -54,11 +54,9 @@ function Questions() {
             // height: "60vh",
           }}
         >
-          {question?.type === "text" && <Text question={question} />}
-          {question?.type === "multipleChoice" && (
-            <MultiChoice question={question} />
-          )}
-          {question?.type === "scale" && <Scale question={question} />}
+          {question?.type === "text" && <Text {...question} />}
+          {question?.type === "multipleChoice" && <MultiChoice {...question} />}
+          {question?.type === "scale" && <Scale {...question} />}
           <Grid
             sx={{
               display: "flex",
