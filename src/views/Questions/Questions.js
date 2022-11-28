@@ -73,7 +73,7 @@ function Questions() {
             >
               Skip
             </Button>
-            <Link to="user/1/question/q4">Next</Link>
+            <Link to={`user/1/question/q1`}>Next</Link>
           </Grid>
           <ProgressBar />
         </Grid>
