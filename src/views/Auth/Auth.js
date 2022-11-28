@@ -12,10 +12,8 @@ const Auth = ({ selectedUser, setSelectedUser }) => {
     }
   }, [selectedUser]);
 
-  const handleAuth = () => {
-    if (selectedUser) {
-      navigate("/dashboard");
-    }
+  const handleAuth = (user) => {
+    setSelectedUser(user);
   };
   return (
     <Grid

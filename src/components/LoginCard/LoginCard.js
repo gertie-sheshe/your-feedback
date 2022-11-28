@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+
 import { Card, CardContent, CardActions, Button } from "@mui/material";
 import LoginForm from "../../components/LoginForm";
 
-function LoginCard({ handleAuth, selectedUser, setSelectedUser }) {
+function LoginCard({ handleAuth, setSelectedUser }) {
+  const [user, setUser] = useState("");
+
   return (
     <Card
       sx={{
@@ -11,14 +14,18 @@ function LoginCard({ handleAuth, selectedUser, setSelectedUser }) {
       }}
     >
       <CardContent>
-        <LoginForm setSelectedUser={setSelectedUser} />
+        <LoginForm
+          setSelectedUser={setSelectedUser}
+          setUser={setUser}
+          user={user}
+        />
       </CardContent>
       <CardActions>
         <Button
-          disabled={selectedUser === null}
+          disabled={user === ""}
           sx={{ width: "100%" }}
           variant="contained"
-          onClick={handleAuth}
+          onClick={() => handleAuth(user)}
         >
           Login
         </Button>
