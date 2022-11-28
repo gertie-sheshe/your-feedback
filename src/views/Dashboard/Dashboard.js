@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Grid } from "@mui/material";
 import ShareFeedback from "../../layout/Tabs/ShareFeedback";
+import NoFeedback from "../../layout/Tabs/NoFeedback";
 
 import { Link } from "react-router-dom";
 
@@ -27,17 +28,17 @@ const Dashboard = ({ tabValue }) => {
         <ShareFeedback />
       </Grid>
       <div id="my-feedback" role="tabpanel" hidden={tabValue !== 1}>
-        MY FEEDBACK CONTENT
+        <NoFeedback />
       </div>
 
       <div id="team-feedback" role="tabpanel" hidden={tabValue !== 2}>
-        TEAM FEEDBACK CONTENT
+        <NoFeedback />
       </div>
 
-      <nav>
+      {/* <nav>
         <Link to="/">Auth</Link>
       </nav>
-      <Button variant="contained">Hello World</Button>
+      <Button variant="contained">Hello World</Button> */}
     </Grid>
   );
 };
