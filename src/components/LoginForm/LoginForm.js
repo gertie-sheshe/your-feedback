@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
-function LoginForm({ setSelectedUser }) {
-  const [user, setUser] = useState("");
-
+function LoginForm({ setUser, user }) {
   const handleChange = (event) => {
     setUser(event.target.value);
-    setSelectedUser(event.target.value);
   };
+
   return (
     <FormControl fullWidth>
       <InputLabel id="auth-select">Login</InputLabel>

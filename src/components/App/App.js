@@ -11,11 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header
-        selectedUser={selectedUser}
-        setValue={setValue}
-        tabValue={value}
-      />
+      <Header setValue={setValue} tabValue={value} />
       <Routes>
         <Route
           path="/"
