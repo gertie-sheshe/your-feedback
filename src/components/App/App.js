@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "../../layout/Header";
 import Dashboard from "../../views/Dashboard";
 import Questions from "../../views/Questions";
+import MyFeedback from "../../layout/Tabs/MyFeedback";
 import Auth from "../../views/Auth";
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           path="/user/:userid/question/:questionid"
           element={<Questions />}
         />
+        <Route path="/user/:userid/feedback" element={<MyFeedback />} />
       </Routes>
     </div>
   );

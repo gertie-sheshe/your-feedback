@@ -18,11 +18,26 @@ const FeedbackSection = styled("section")({
 
 // temporary users list
 const users = [
-  "Gertrude Kwanza",
-  "Gertrude Waili",
-  "Gertrude Watatu",
-  "Gertrude Wanne",
-  "Gertrude Watano",
+  {
+    id: 1,
+    name: "Gertrude Kwanza",
+  },
+  {
+    id: 2,
+    name: "Gertrude Wawili",
+  },
+  {
+    id: 3,
+    name: "Gertrude Watatu",
+  },
+  {
+    id: 4,
+    name: "Gertrude Wanne",
+  },
+  {
+    id: 5,
+    name: "Gertrude Watano",
+  },
 ];
 
 function MyFeedback() {
@@ -51,20 +66,22 @@ function MyFeedback() {
               Feedback given
             </Typography>
             <List>
-              {users.map((name) => (
-                <ListItem
-                  sx={{
-                    padding: "30px",
-                    borderTop: "1px solid gray",
-                    borderBottom: "1px solid gray",
-                    "&:hover": {
-                      backgroundColor: "#E8E8E8",
-                    },
-                  }}
-                  key={name}
-                >
-                  <Link to={`/${name}`}>{name}</Link>
-                </ListItem>
+              {users.map(({ id, name }) => (
+                <Link to={`/user/${id}/feedback`}>
+                  <ListItem
+                    sx={{
+                      padding: "30px",
+                      borderTop: "1px solid gray",
+                      borderBottom: "1px solid gray",
+                      "&:hover": {
+                        backgroundColor: "#E8E8E8",
+                      },
+                    }}
+                    key={id}
+                  >
+                    {name}
+                  </ListItem>
+                </Link>
               ))}
             </List>
           </ListSection>
