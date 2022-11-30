@@ -8,7 +8,7 @@ import {
   FormControl,
 } from "@mui/material";
 
-function PanelHeading() {
+function PanelHeading({ label }) {
   return (
     <Grid
       sx={{
@@ -17,7 +17,7 @@ function PanelHeading() {
         margin: "40px 0",
       }}
     >
-      <Typography variant="h2">Share Feedback</Typography>
+      <Typography variant="h2">{label}</Typography>
       <FormControl sx={{ width: "30%" }}>
         <InputLabel id="feedback-period-label">Feedback Period:</InputLabel>
         <Select labelId="feedback-period-label">

@@ -5,7 +5,7 @@ import PanelHeading from "../../../components/PanelHeading";
 function ShareFeedback() {
   return (
     <>
-      <PanelHeading />
+      <PanelHeading label="Share Feedback" />
       <UsersList />
     </>
   );

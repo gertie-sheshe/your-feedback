@@ -10,7 +10,7 @@ const Auth = ({ selectedUser, setSelectedUser }) => {
     if (selectedUser) {
       navigate("/dashboard");
     }
-  }, [selectedUser]);
+  }, [selectedUser, navigate]);
 
   const handleAuth = (user) => {
     setSelectedUser(user);
