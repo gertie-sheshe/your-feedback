@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "../../layout/Header";
 import Dashboard from "../../views/Dashboard";
 import Questions from "../../views/Questions";
@@ -7,7 +7,11 @@ import MyFeedback from "../../layout/Tabs/MyFeedback";
 import Auth from "../../views/Auth";
 
 function App() {
-  const [value, setValue] = useState(0);
+  const location = useLocation();
+
+  const [value, setValue] = useState(
+    location.pathname === "/" ? "/dashboard/share-feedback" : location.pathname // fix the hard coded bit?
+  );
   const [selectedUser, setSelectedUser] = useState(null);
 
   return (
@@ -27,7 +31,10 @@ function App() {
             />
           }
         />
-        <Route path="/dashboard" element={<Dashboard tabValue={value} />} />
+        <Route
+          path="/dashboard/:tab"
+          element={<Dashboard tabValue={value} />}
+        />
         <Route
           path="/user/:userid/question/:questionid"
           element={<Questions />}

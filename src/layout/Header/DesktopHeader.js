@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { HeaderContainer } from "./HeaderStyles";
 import UserAvatar from "../../ui/UserAvatar";
 import { Grid, Typography, Tab, Tabs } from "@mui/material";
@@ -18,11 +19,29 @@ function DesktopHeader({ sx, avatar, setTabValue, tabValue, selectedUser }) {
         >
           Feedback
         </Typography>
-        {selectedUser && (
+        {true && (
           <Tabs onChange={handleChange} value={tabValue}>
-            <Tab label="Share Feedback" id="share-feedback" />
-            <Tab label="My Feedback" id="my-feedback" />
-            <Tab label="Team Feedback" id="team-feedback" />
+            <Tab
+              component={Link}
+              value="/dashboard/share-feedback"
+              to="/dashboard/share-feedback"
+              label="Share Feedback"
+              id="share-feedback"
+            />
+            <Tab
+              component={Link}
+              to="/dashboard/my-feedback"
+              value="/dashboard/my-feedback"
+              label="My Feedback"
+              id="my-feedback"
+            />
+            <Tab
+              component={Link}
+              to="/dashboard/team-feedback"
+              value="/dashboard/team-feedback"
+              label="Team Feedback"
+              id="team-feedback"
+            />
           </Tabs>
         )}
         <UserAvatar src={avatar} alt="Gertie" />
