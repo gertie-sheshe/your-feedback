@@ -19,11 +19,11 @@ function DesktopHeader({ sx, avatar, setTabValue, tabValue, selectedUser }) {
         >
           Feedback
         </Typography>
-        {true && (
+        {selectedUser && (
           <Tabs onChange={handleChange} value={tabValue}>
             <Tab
               component={Link}
-              value="/dashboard/share-feedback"
+              value="share-feedback"
               to="/dashboard/share-feedback"
               label="Share Feedback"
               id="share-feedback"
@@ -31,14 +31,14 @@ function DesktopHeader({ sx, avatar, setTabValue, tabValue, selectedUser }) {
             <Tab
               component={Link}
               to="/dashboard/my-feedback"
-              value="/dashboard/my-feedback"
+              value="my-feedback"
               label="My Feedback"
               id="my-feedback"
             />
             <Tab
               component={Link}
               to="/dashboard/team-feedback"
-              value="/dashboard/team-feedback"
+              value="team-feedback"
               label="Team Feedback"
               id="team-feedback"
             />

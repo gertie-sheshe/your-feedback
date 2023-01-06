@@ -10,7 +10,9 @@ function App() {
   const location = useLocation();
 
   const [value, setValue] = useState(
-    location.pathname === "/" ? "/dashboard/share-feedback" : location.pathname // fix the hard coded bit?
+    location.pathname === "/"
+      ? "share-feedback"
+      : location.pathname.split("/")[2] // fix the hard coded bit?
   );
   const [selectedUser, setSelectedUser] = useState(null);
 

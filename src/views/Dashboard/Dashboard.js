@@ -1,20 +1,10 @@
 import React from "react";
-import { Button, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import ShareFeedback from "../../layout/Tabs/ShareFeedback";
 import NoFeedback from "../../layout/Tabs/NoFeedback";
 import MyFeedback from "../../layout/Tabs/MyFeedback";
 
-import { useParams } from "react-router-dom";
-
 const Dashboard = ({ tabValue }) => {
-  console.log("TEST RENDERR");
-  const { tab } = useParams();
-
-  // console.log("TAB", tab);
-  // console.log("CHECK TAB VALUE", tabValue !== 0);
-  // console.log("CHECK TAB", tab !== "my-feedback");
-
-  // console.log("TAB VALUE", tabValue);
   return (
     <Grid
       sx={{
@@ -33,7 +23,7 @@ const Dashboard = ({ tabValue }) => {
         id="share-feedback"
         role="tabpanel"
         aria-labelledby="share feedback"
-        hidden={tabValue !== "/dashboard/share-feedback"}
+        hidden={tabValue !== "share-feedback"}
       >
         <ShareFeedback />
       </Grid>
@@ -45,7 +35,7 @@ const Dashboard = ({ tabValue }) => {
         id="my-feedback"
         role="tabpanel"
         aria-labelledby="my feedback"
-        hidden={tabValue !== "/dashboard/my-feedback"}
+        hidden={tabValue !== "my-feedback"}
       >
         <MyFeedback />
       </Grid>
@@ -54,7 +44,7 @@ const Dashboard = ({ tabValue }) => {
         id="team-feedback"
         role="tabpanel"
         aria-labelledby="team feedback"
-        hidden={tabValue !== "/dashboard/team-feedback"}
+        hidden={tabValue !== "team-feedback"}
       >
         <NoFeedback />
       </div>
