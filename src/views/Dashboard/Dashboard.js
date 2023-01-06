@@ -22,7 +22,6 @@ const Dashboard = ({ tabValue }) => {
         }}
         id="share-feedback"
         role="tabpanel"
-        aria-labelledby="share feedback"
         hidden={tabValue !== "share-feedback"}
       >
         <ShareFeedback />
@@ -34,7 +33,6 @@ const Dashboard = ({ tabValue }) => {
         }}
         id="my-feedback"
         role="tabpanel"
-        aria-labelledby="my feedback"
         hidden={tabValue !== "my-feedback"}
       >
         <MyFeedback />
@@ -43,7 +41,6 @@ const Dashboard = ({ tabValue }) => {
       <div
         id="team-feedback"
         role="tabpanel"
-        aria-labelledby="team feedback"
         hidden={tabValue !== "team-feedback"}
       >
         <NoFeedback />
