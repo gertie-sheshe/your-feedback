@@ -1,10 +1,8 @@
 import React from "react";
-import { Button, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import ShareFeedback from "../../layout/Tabs/ShareFeedback";
 import NoFeedback from "../../layout/Tabs/NoFeedback";
 import MyFeedback from "../../layout/Tabs/MyFeedback";
-
-import { Link } from "react-router-dom";
 
 const Dashboard = ({ tabValue }) => {
   return (
@@ -24,7 +22,7 @@ const Dashboard = ({ tabValue }) => {
         }}
         id="share-feedback"
         role="tabpanel"
-        hidden={tabValue !== 0}
+        hidden={tabValue !== "share-feedback"}
       >
         <ShareFeedback />
       </Grid>
@@ -35,12 +33,16 @@ const Dashboard = ({ tabValue }) => {
         }}
         id="my-feedback"
         role="tabpanel"
-        hidden={tabValue !== 1}
+        hidden={tabValue !== "my-feedback"}
       >
         <MyFeedback />
       </Grid>
 
-      <div id="team-feedback" role="tabpanel" hidden={tabValue !== 2}>
+      <div
+        id="team-feedback"
+        role="tabpanel"
+        hidden={tabValue !== "team-feedback"}
+      >
         <NoFeedback />
       </div>
 

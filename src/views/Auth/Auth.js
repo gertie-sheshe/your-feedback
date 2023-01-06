@@ -8,7 +8,7 @@ const Auth = ({ selectedUser, setSelectedUser }) => {
 
   useEffect(() => {
     if (selectedUser) {
-      navigate("/dashboard");
+      navigate("/dashboard/share-feedback");
     }
   }, [selectedUser, navigate]);
 
